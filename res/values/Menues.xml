@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string name="menu_0">实时信息</string>
+      <string name="menu_1">路况信息</string>
+        <string name="menu_2">保单信息</string>
+        <string name="menu_3">服务地图</string>
+        <string name="menu_4">驾驶行为统计</string>
+        <string name="menu_5">故障信息</string>
+        <string name="menu_6">在线投保</string>
+        <string name="menu_7">天气预报</string>
+</resources>
