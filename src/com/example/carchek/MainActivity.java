@@ -1,6 +1,9 @@
 package com.example.carchek;
 
 
+import com.amap.api.search.route.Route;
+
+import android.media.MediaRouter.RouteInfo;
 import android.os.Bundle;
 import android.os.Debug;
 import android.app.Activity;
@@ -57,16 +60,24 @@ public class MainActivity extends Activity {
 			Intent serverIntent = null;
 			switch (position) {
 			case 0:
-				serverIntent= new Intent(MainActivity.this,
+				serverIntent = new Intent(MainActivity.this,
 						Oncarcheck.class);
+				serverIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);				
 				break;
 				
 			case 1:
+				Log.i("Ò³Ãæ´úºÅ","i");
+				serverIntent = new Intent(MainActivity.this,
+						Routeinfo.class);
+				serverIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);				
+				break;
+			case 3:
 				serverIntent= new Intent(MainActivity.this,
-						ClientActivity.class);
+						MapNow.class);
+				serverIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);						
 				break;
 			default:
-				break;
+				return;
 			}
 			startActivity(serverIntent);
 		}
