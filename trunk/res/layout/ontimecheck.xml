@@ -33,10 +33,12 @@
 
     <ListView
         android:id="@+id/listView1"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="200dp"
-        android:paddingLeft="20dp" >
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="200dp" >
 
     </ListView>
 

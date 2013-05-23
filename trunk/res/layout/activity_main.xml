@@ -32,8 +32,8 @@
 
     <ImageButton
         android:id="@+id/imageButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_above="@+id/textView1"
         android:layout_alignLeft="@+id/textView1"
         android:src="@drawable/menu_1" />

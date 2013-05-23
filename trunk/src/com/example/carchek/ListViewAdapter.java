@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class ListViewAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {		
+	public View getView(int position, View convertView, ViewGroup parent) {
 		switch (Type) {
 		case 0:
 			TextView itemView = new TextView(context);
@@ -58,16 +59,41 @@ public class ListViewAdapter extends BaseAdapter {
 				convertView.setTag(holder);
 			} else {
 				holder = (ViewHolder1) convertView.getTag();
-			}			
-			
-			List string2=(List)list.get(position);
-			holder.title.setText((String)string2.get(0));
-			holder.value.setText((String)string2.get(1));
+			}
+
+			List string2 = (List) list.get(position);
+			holder.title.setText((String) string2.get(0));
+			holder.value.setText((String) string2.get(1));
+			return convertView;
+		case 2:
+			LayoutInflater lay1 = (LayoutInflater) context
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			ViewHolder1 holder1 = null;
+			if (convertView == null) {
+				holder1 = new ViewHolder1();
+				convertView = lay1.inflate(R.layout.text_textitem, null);
+				holder1.title = (TextView) convertView
+						.findViewById(R.id.textView1);
+				holder1.value = (TextView) convertView
+						.findViewById(R.id.textView2);
+				holder1.imageView=(ImageView)convertView
+						.findViewById(R.id.imageView1);
+				convertView.setTag(holder1);
+			} else {
+				holder1 = (ViewHolder1) convertView.getTag();
+			}
+
+			List string21 = (List) list.get(position);
+			holder1.title.setText((String) string21.get(0));
+			holder1.value.setText((String) string21.get(1));
+			holder1.imageView.setImageResource(context.getResources().getIdentifier((String) string21.get(2),
+					"drawable", "com.example.carchek"));//((String) string2.get(1));
+			//holder1.imageView.setLayoutParams(new Gallery.LayoutParams(35,35));//设置Gallery中每一个图片的大小为80*80。
+			//holder1.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 			return convertView;
 		default:
 			return convertView;
 		}
-		
 
 	}
 
@@ -98,6 +124,7 @@ public class ListViewAdapter extends BaseAdapter {
 	public final class ViewHolder1 {
 		public TextView title;
 		public TextView value;
+		public ImageView imageView;
 		// public TextView info;
 		// public Button viewBtn;
 	}
