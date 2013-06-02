@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.RotateAnimation;
 
@@ -59,7 +58,7 @@ public class ZhuanpanView extends View {
      public void StarRotate(float start,float end)
      {
     	 animation= new RotateAnimation(start,end,xPoint,yPoint);
-    	 Log.i("End",String.valueOf(end));
+    	// Log.i("End",String.valueOf(end));
      	 animation.setDuration(time);// 设置动画持续时间
      	 this.setAnimation(animation);
          animation.setFillAfter(true);//动画执行完后是否停留在执行完的状态

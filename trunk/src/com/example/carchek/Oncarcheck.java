@@ -45,6 +45,7 @@ public class Oncarcheck extends Activity {
 			string.add(ico[i]);
 			ValuesList.AddItem(string);
 		}
+		
 		IsStop=false;
 		handler.postDelayed(task, 2000);
 	}
@@ -63,7 +64,7 @@ public class Oncarcheck extends Activity {
 			  if(x>270) x=x-45;
 			  if(x<-45) x=x+45;
 			  panView.StarRotate(x);
-		    	 Log.i("start",String.valueOf(panView.AngleNow));
+		    	// Log.i("start",String.valueOf(panView.AngleNow));
 			if (!IsStop) {
 				handler.postDelayed(this, 2000);
 			}

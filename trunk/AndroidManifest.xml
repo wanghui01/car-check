@@ -49,6 +49,9 @@
             android:name="MapNow" android:label="车辆实时定位">
         </activity>
         <activity android:name="Routeinfo" android:label="前方路况信息"></activity>
+        <activity android:name="Jiashixingwei" android:label="驾驶行为统计"></activity>
+        <activity android:name="Gzhang" android:label="故障信息诊断"></activity>
+        <service android:name="com.ds.bluetoothUtil.BluetoothClientService"></service>
     </application>
 
 </manifest>

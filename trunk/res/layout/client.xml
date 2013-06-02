@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingBottom="4dip" >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
@@ -24,11 +25,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textOn="开启"
-        		android:textOff="关闭"
-                
-                android:text="ToggleButton" />
-
+                android:text="ToggleButton"
+                android:textOff="关闭"
+                android:textOn="开启" />
         </LinearLayout>
 
         <Button
@@ -43,15 +42,19 @@
             android:layout_height="wrap_content"
             android:text="连接设备" />
 
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:choiceMode="singleChoice" >
+        <ScrollView
+            android:id="@+id/ScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-        </ListView>
+            <RadioGroup
+                 android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </RadioGroup>
+        </ScrollView>
 
-           
+        
     </LinearLayout>
-    </RelativeLayout>
+
+</RelativeLayout>

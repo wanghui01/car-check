@@ -33,8 +33,7 @@ public class BluetoothClientService extends Service {
 	private BluetoothCommunThread communThread;
 	
 	//控制信息广播的接收器
-	private BroadcastReceiver controlReceiver = new BroadcastReceiver() {
-		
+	private BroadcastReceiver controlReceiver = new BroadcastReceiver() {		
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			String action = intent.getAction();
@@ -98,7 +97,6 @@ public class BluetoothClientService extends Service {
 				//获取设备
 				BluetoothDevice bluetoothDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 				discoveredDevices.add(bluetoothDevice);
-
 				//发送发现设备广播
 				Intent deviceListIntent = new Intent(BluetoothTools.ACTION_FOUND_DEVICE);
 				deviceListIntent.putExtra(BluetoothTools.DEVICE, bluetoothDevice);
@@ -188,7 +186,6 @@ public class BluetoothClientService extends Service {
 		controlFilter.addAction(BluetoothTools.ACTION_SELECTED_DEVICE);
 		controlFilter.addAction(BluetoothTools.ACTION_STOP_SERVICE);
 		controlFilter.addAction(BluetoothTools.ACTION_DATA_TO_SERVICE);
-		
 		//注册BroadcastReceiver
 		registerReceiver(discoveryReceiver, discoveryFilter);
 		registerReceiver(controlReceiver, controlFilter);
