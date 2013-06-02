@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">保险车联网手机终端</string>
+    <string name="app_name">HFUT保险车联网手机终端</string>
     <string name="action_settings">Settings</string>
     <string name="action_no_device">本机未发现蓝牙设备</string>
     <string name="action_no_found">没有发现蓝牙设备</string>
-    <string name="action_no_select">为选择蓝牙对象</string>
+    <string name="action_no_select">未选择蓝牙对象</string>
     <string name="stop">停止</string>
     <string name="start">开始</string>
 

@@ -1,19 +1,13 @@
 package com.example.carchek;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.example.carchek.ImageAdapter.ViewHolder;
-
-import android.R.integer;
 import android.app.Activity;
 import android.content.Context;
-import android.text.GetChars;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
 

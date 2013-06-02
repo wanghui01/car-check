@@ -17,7 +17,7 @@ public class BluetoothTools {
 	/**
 	 * 本程序所使用的UUID
 	 */
-	public static final UUID PRIVATE_UUID = UUID.fromString("0f3561b9-bda5-4672-84ff-ab1f98e349b6");
+	public static final UUID PRIVATE_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 	
 	/**
 	 * 字符串常量，存放在Intent中的设备对象
